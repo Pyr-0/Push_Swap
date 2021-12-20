@@ -6,7 +6,7 @@
 /*   By: satori <satori@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/31 23:23:55 by mrojas-e          #+#    #+#             */
-/*   Updated: 2021/12/17 18:21:25 by satori           ###   ########.fr       */
+/*   Updated: 2021/12/20 14:22:59 by satori           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,18 +23,18 @@ void	ft_reverse_rotate(t_Ouroboros **snake_head)
 void	ft_RR_A(t_Ouroboros **a, __attribute__ ((unused)) t_Ouroboros **b)
 {
 	ft_reverse_rotate(a);
-	make_fabulous("rra\n", CYAN);
+	ft_putstr_fd("rra\n", 1);
 }
 
 void	ft_RR_B(__attribute__ ((unused)) t_Ouroboros **a, t_Ouroboros **b)
 {
 	ft_reverse_rotate(b);
-	make_fabulous("rrb\n", CYAN);
+	ft_putstr_fd("rrb\n", 1);
 }
 
 void	ft_RR_both(t_Ouroboros **a, t_Ouroboros **b)
 {
 	ft_reverse_rotate(a);
 	ft_reverse_rotate(b);
-	make_fabulous("rrr\n", CYAN);
+	ft_putstr_fd("rrr\n", 1);
 }

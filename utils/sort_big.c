@@ -6,7 +6,7 @@
 /*   By: satori <satori@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/16 15:13:09 by satori            #+#    #+#             */
-/*   Updated: 2021/12/16 23:38:59 by satori           ###   ########.fr       */
+/*   Updated: 2021/12/20 14:37:13 by satori           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,37 +16,37 @@ int	radix_bit_filter(t_Ouroboros **stack_a, int i)
 {
 	int			elements_processed;
 	int			elements_total;
-	t_Ouroboros *temp;
+	t_Ouroboros	*temp;
 
 	elements_total = ft_list_len(stack_a);
 	temp = *stack_a;
 	elements_processed = 0;
-	while(elements_processed < elements_total)
+	while (elements_processed < elements_total)
 	{
-		if(((temp)->inverse_rank & (1 << i)))
+		if (((temp)->inverse_rank & (1 << i)))
 			return (1);
 		elements_processed ++;
 		temp = temp->next;
 	}
-	return (0) ;
+	return (0);
 }
 
 void	ft_radix_sort(t_Ouroboros **stack_a, t_Ouroboros **stack_b)
 {
-	int i;
-	int elements_processed;
-	int elements_total;
+	int	i;
+	int	elements_processed;
+	int	elements_total;
 
 	i = 0;
 	elements_total = ft_list_len(stack_a);
-	while(i < 32)
+	while (i < 32)
 	{
-		if (radix_bit_filter(stack_a , i) == 1)
+		if (radix_bit_filter(stack_a, i) == 1)
 		{
 			elements_processed = 0;
-			while(elements_processed < elements_total)
+			while (elements_processed < elements_total)
 			{
-				if(((*stack_a)->inverse_rank & (1 << i)))
+				if (((*stack_a)->inverse_rank & (1 << i)))
 					ft_push_to_B(stack_a, stack_b);
 				else
 					ft_rotate_A(stack_a, stack_b);
@@ -59,7 +59,7 @@ void	ft_radix_sort(t_Ouroboros **stack_a, t_Ouroboros **stack_b)
 	}
 }
 
-void	choose_algo(t_Ouroboros **stack_a,  t_Ouroboros **stack_b,int len)
+void	choose_algo(t_Ouroboros **stack_a, t_Ouroboros **stack_b, int len)
 {
 	if (len <= 3)
 		ft_sort_3(stack_a);

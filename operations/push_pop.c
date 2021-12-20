@@ -6,7 +6,7 @@
 /*   By: satori <satori@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/31 23:25:47 by mrojas-e          #+#    #+#             */
-/*   Updated: 2021/12/17 19:06:08 by satori           ###   ########.fr       */
+/*   Updated: 2021/12/20 14:22:30 by satori           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,16 +37,13 @@ void	ft_push(t_Ouroboros **snake_head, t_Ouroboros *new_node)
 void	ft_push_to_A(t_Ouroboros **a, t_Ouroboros **b)
 {
 	ft_push(a, ft_pop(b, 0));
-/* 	write(1, CYAN, 7);
-	write(1, "pa\n", 3);
-	write(1, RESET, 7); */
-	make_fabulous("pa\n", NULL);
+	ft_putstr_fd("pa\n", 1);
 }
 
 void	ft_push_to_B(t_Ouroboros **a, t_Ouroboros **b)
 {
 	ft_push(b, ft_pop(a, 0));
-	make_fabulous("pb\n", NULL);
+	ft_putstr_fd("pb\n", 1);
 }
 
 t_Ouroboros	*ft_pop(t_Ouroboros **snake_head, int x)

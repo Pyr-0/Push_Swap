@@ -6,7 +6,7 @@
 /*   By: satori <satori@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/20 14:42:53 by mrojas-e          #+#    #+#             */
-/*   Updated: 2021/12/17 22:56:31 by satori           ###   ########.fr       */
+/*   Updated: 2021/12/18 15:49:29 by satori           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,8 +39,7 @@ int	ft_error(t_Ouroboros **snake_head, char **input)
 		ft_free_split(input);
 	if (snake_head != NULL)
 		ft_free_list(snake_head);
-
-	make_fabulous("Error\n", RED);
+	ft_putstr_fd("Error\n", 2);
 	return (ERROR);
 }
 

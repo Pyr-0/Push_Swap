@@ -6,34 +6,11 @@
 /*   By: satori <satori@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/15 23:01:03 by mrojas-e          #+#    #+#             */
-/*   Updated: 2021/12/17 22:55:05 by satori           ###   ########.fr       */
+/*   Updated: 2021/12/20 13:42:01 by satori           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/push_swap.h"
-
-/*====COLOURISE====*/
-
-const char	RAINBOWS[6][7] = {RED, BLUE,PURPLE,CYAN,GREEN,YELLOW};
-
-void	make_fabulous(char *s, char *colour)
-{
-	static int	i;
-
-	if (colour == NULL)
-	{
-		write (1, RAINBOWS[i], 7);
-		i++;
-		if (i == 6)
-			i = 0;
-	}
-	else
-	{
-		write (1, colour, 7);
-		write (1, s, ft_strlen(s));
-		write (1, RESET, 7);
-	}
-}
 
 /*====LIST MANIPULATION====*/
 

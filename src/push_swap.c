@@ -6,7 +6,7 @@
 /*   By: satori <satori@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/11 23:33:00 by mrojas-e          #+#    #+#             */
-/*   Updated: 2021/12/17 17:16:46 by satori           ###   ########.fr       */
+/*   Updated: 2021/12/20 14:25:17 by satori           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,7 +53,8 @@ int	ft_create_list(t_Ouroboros **snake_head, char **argv)
 
 int	main(int argc, char **argv)
 {
-	t_stacks stacks;
+	t_stacks	stacks;
+
 	if (argc < 2)
 		return (0);
 	stacks.stack_b = 0;
@@ -61,8 +62,6 @@ int	main(int argc, char **argv)
 	if (ft_create_list(&stacks.stack_a, argv) == ERROR)
 		return (ERROR);
 	ft_find_rank(&stacks.stack_a);
-	//if (ft_is_sorted(&stacks.stack_a))
-	//	exit (0);
 	choose_algo(&stacks.stack_a, &stacks.stack_b, ft_list_len(&stacks.stack_a));
 	ft_free_list(&stacks.stack_a);
 	ft_free_list(&stacks.stack_b);

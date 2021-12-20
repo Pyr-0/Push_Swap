@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mrojas-e <mrojas-e@student.42.fr>          +#+  +:+       +#+        */
+/*   By: satori <satori@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/27 12:45:54 by mrojas-e          #+#    #+#             */
-/*   Updated: 2021/10/27 19:44:37 by mrojas-e         ###   ########.fr       */
+/*   Updated: 2021/12/20 14:53:36 by satori           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@
 
 typedef struct s_LinkedlistNode
 {
-	void			*content;
+	void					*content;
 	struct s_LinkedlistNode	*next;
 }t_list;
 
