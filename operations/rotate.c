@@ -6,7 +6,7 @@
 /*   By: satori <satori@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/31 23:21:30 by mrojas-e          #+#    #+#             */
-/*   Updated: 2021/12/18 17:00:13 by satori           ###   ########.fr       */
+/*   Updated: 2021/12/20 15:51:22 by satori           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,13 +20,13 @@ void	ft_rotate(t_Ouroboros **snake_head)
 	return ;
 }
 
-void	ft_rotate_A(t_Ouroboros **a, __attribute__ ((unused)) t_Ouroboros **b)
+void	ft_rotate_a(t_Ouroboros **a, __attribute__ ((unused)) t_Ouroboros **b)
 {
 	ft_rotate(a);
 	ft_putstr_fd("ra\n", 1);
 }
 
-void	ft_rotate_B(__attribute__ ((unused)) t_Ouroboros **a, t_Ouroboros **b)
+void	ft_rotate_b(__attribute__ ((unused)) t_Ouroboros **a, t_Ouroboros **b)
 {
 	ft_rotate(b);
 	ft_putstr_fd("rb\n", 1);

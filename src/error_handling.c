@@ -6,7 +6,7 @@
 /*   By: satori <satori@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/20 14:42:53 by mrojas-e          #+#    #+#             */
-/*   Updated: 2021/12/18 15:49:29 by satori           ###   ########.fr       */
+/*   Updated: 2021/12/20 16:01:56 by satori           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ int	ft_free_split(char **input)
 	return (ERROR);
 }
 
-//printing thh actual error
+/*====CHECK AND PRINT ERROR====*/
 
 int	ft_error(t_Ouroboros **snake_head, char **input)
 {
@@ -43,7 +43,7 @@ int	ft_error(t_Ouroboros **snake_head, char **input)
 	return (ERROR);
 }
 
-/*====CHECK FOR INTS (LIMITS TOO)*/
+/*====CHECK FOR INTS AND MAX/MIN LIMITS====*/
 
 int	ft_is_int(char **input)
 {

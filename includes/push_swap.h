@@ -6,7 +6,7 @@
 /*   By: satori <satori@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/12 01:24:41 by mrojas-e          #+#    #+#             */
-/*   Updated: 2021/12/20 15:50:36 by satori           ###   ########.fr       */
+/*   Updated: 2021/12/20 15:54:49 by satori           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -78,11 +78,11 @@ void			ft_rotate_b(__attribute__ ((unused)) t_Ouroboros **a,
 					t_Ouroboros **b);
 void			ft_rotate_both(t_Ouroboros **a, t_Ouroboros **b);
 void			ft_reverse_rotate(t_Ouroboros **snake_head);
-void			ft_RR_a(t_Ouroboros **a,
+void			ft_rr_a(t_Ouroboros **a,
 					__attribute__ ((unused)) t_Ouroboros **b);
-void			ft_RR_b(__attribute__ ((unused)) t_Ouroboros **a,
+void			ft_rr_b(__attribute__ ((unused)) t_Ouroboros **a,
 					t_Ouroboros **b);
-void			ft_RR_both(t_Ouroboros **a, t_Ouroboros **b);
+void			ft_rr_both(t_Ouroboros **a, t_Ouroboros **b);
 
 //===== ERROR HANDLING AND FREE MEMORY ====//
 
