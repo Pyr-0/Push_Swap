@@ -6,7 +6,7 @@
 /*   By: satori <satori@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/16 15:13:09 by satori            #+#    #+#             */
-/*   Updated: 2021/12/20 15:58:24 by satori           ###   ########.fr       */
+/*   Updated: 2021/12/20 16:27:27 by satori           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,8 +39,6 @@ void	ft_radix_sort(t_Ouroboros **stack_a, t_Ouroboros **stack_b)
 
 	i = 0;
 	elements_total = ft_list_len(stack_a);
-	if (ft_is_sorted(stack_a))
-		return ;
 	while (i < 32)
 	{
 		if (radix_bit_filter(stack_a, i) == 1)
@@ -69,6 +67,8 @@ void	choose_algo(t_Ouroboros **stack_a, t_Ouroboros **stack_b, int len)
 		ft_sort_4(stack_a, stack_b);
 	else if (len == 5)
 		ft_sort_5(stack_a, stack_b);
+	else if (len >= 6 && ft_is_sorted(stack_a))
+		return ;
 	else
 		ft_radix_sort(stack_a, stack_b);
 }

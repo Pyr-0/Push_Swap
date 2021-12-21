@@ -6,7 +6,7 @@
 #    By: satori <satori@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/10/11 23:32:22 by mrojas-e          #+#    #+#              #
-#    Updated: 2021/12/18 16:08:41 by satori           ###   ########.fr        #
+#    Updated: 2021/12/21 03:33:31 by satori           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -28,7 +28,7 @@ AR = ar crs
 LIBFT_LIB = libft.a
 LIBFT_PATH = libft/
 LIBFT_OBJS = ${LIBFT_PATH}*.o
-LIBFTMAKE = $(MAKE) -C ${LIBFT_PATH} --no-print-directory
+LIBFTMAKE = $(MAKE) -silentx -C ${LIBFT_PATH}
  
 #====COLORS====#
 
@@ -54,7 +54,7 @@ ${NAME}: pmake
 	@${CC} ${CFLAGS} ${HEADERS_FOLDER} ${SRCS} ${LIBFT_PATH}${LIBFT_LIB} -o ${NAME}
 
 clean:
-	@make -C ${LIBFT_PATH} clean
+	@make -silent -C ${LIBFT_PATH} clean
 	@echo "$(RED)    __________________________________$(NC)"
 	@echo "$(RED)      $(NAME) object-files DELETED!$(NC)"
 	
